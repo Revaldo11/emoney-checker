@@ -1,3 +1,4 @@
+import 'package:emoney_checker/app/splash_screen/splash_screen.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
@@ -8,6 +9,10 @@ import 'app_routes.dart';
 
 class AppPages {
   static final pages = [
+    GetPage(
+      name: AppRoutes.initial,
+      page: () => const SplashScreen(),
+    ),
     GetPage(
       name: AppRoutes.home,
       page: () => const HomeView(),

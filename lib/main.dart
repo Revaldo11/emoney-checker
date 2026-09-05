@@ -5,6 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'app/routes/app_pages.dart';
 import 'app/routes/app_routes.dart';
 import 'data/repositories/card_repository.dart';
+import 'core/theme/app_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,12 +31,9 @@ class EmoneyCheckerApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Cek Saldo E-Money',
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.initial,
       getPages: AppPages.pages,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: const Color(0xFFFFD93D), // accent-primary, sesuai design-system.md
-      ),
+      theme: AppTheme.data,
     );
   }
 }
